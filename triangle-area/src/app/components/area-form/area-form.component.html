@@ -1,0 +1,48 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title text-center">Calculate The Area of a Triangle</h5>
+     <hr />
+      <h5 class="card-title text-center">(b*h)/2</h5>
+      <hr />
+    </div>
+
+    <div class="input-group my-2">
+      <span class="input-group-text mt-4" id="base">B</span>
+      <input
+        type="text"
+        class="form-control mt-4"
+        placeholder="enter BASE: "
+        [(ngModel)]="base"
+      />
+    </div>
+    <div class="input-group my-2">
+      <span class="input-group-text mt-4" id="height">H</span>
+      <input
+        id="height"
+        class="form-control mt-4"
+        placeholder="Enter HEIGHT: "
+        [(ngModel)]="height"
+      />
+    </div>
+
+    <div class="input-group my-3">
+      <button
+        class="btn btn-primary mt-4"
+        type="button"
+        (click)="calculateArea()"
+        [disabled]="!isValid()"
+      >
+        Find:
+      </button>
+      <input
+        type="text"
+        class="form-control mt-4"
+        placeholder="Triangle Area is:"
+        [(ngModel)]="area"
+      />
+    </div>
+  </div>
+</div>
+
+<app-area-answer> [areas]="contacts " </app-area-answer>
